@@ -16,7 +16,7 @@ markerList.forEach((item) => {
 const latAvg = lat.reduce((acc, val) => acc + val, 0) / lat.length;
 const longAvg = long.reduce((acc, val) => acc + val, 0) / long.length;
 
-const map = L.map('map').setView([latAvg, longAvg]);
+const map = L.map('map').setView([latAvg, longAvg], 13);
 
 for (let i = 0; i < markerList.length; i++) {
   const circle = L.circle(markerList[i], {
